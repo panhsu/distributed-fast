@@ -47,16 +47,13 @@ class record_time_consumption(ConfigParser.ConfigParser):
                         n = re.match("(.*)\-(\d*)",case_id)
                         if not (n is None):
                             case_id = n.group(1)
-                        #print dict_cases_timecost.keys()
-                        #print case_id
+                     
                         if case_id in dict_cases_timecost.keys():
                             cost = dict_cases_timecost[str(case_id)] 
                             cost_time = int(cost)+ int(cost_time)
                         
                         dict_cases_timecost.update({str(case_id).upper():int(cost_time)})
         return self.time_consumtion
-
-                  
 
 
     def save_as_ini(self,ini_file,d):
