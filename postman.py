@@ -12,7 +12,7 @@ import os
 class postman():
     
     def __init__(self):
-        self.server = smtplib.SMTP('mailrelay.trend.com.tw')
+        self.server = smtplib.SMTP('company.smtp.server')
         self.usename = ""
         self.password = ""
     
