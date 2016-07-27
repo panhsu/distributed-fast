@@ -22,7 +22,7 @@ class postman():
        
         # Construct email
         msg = MIMEMultipart()
-        msg['From'] = "Aegis <AEGIS@trend.com.tw>"
+        msg['From'] = "Team Name"
         msg['To'] = receivers
         msg['Subject'] = subject
         for file in filepath:
@@ -38,11 +38,11 @@ class postman():
         #   attachment.close()
 
 if __name__ =="__main__":
-    filepath = "Win7EnX64.html"
+    filepath = "xxx.html"
     filename = basename(filepath)
     title = os.path.splitext(filename)[0]
     result = "(0)"
     build = "7.0"
-    subject = "["+build+"] "+"AEGIS Pre-Build FAST Report:"+title+result
+    subject = "["+build+"] "+"FAST Report:"+title+result
     sender = postman()
-    sender.mail_attachment(subject,'pan_hsu@trend.com.tw',filepath,filepath)
+    sender.mail_attachment(subject,'xxx@email.com',filepath,filepath)
